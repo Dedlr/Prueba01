@@ -1,0 +1,36 @@
+
+function FilesFunction(files) {
+
+
+    const count = {}
+
+    const newFile = []   
+  
+    for (const file of files) { 
+
+      if (count[file] === undefined) { 
+        count[file] = 0 
+        newFile.push(file)   
+      } else {
+        count[file]++;   
+        const nFiles = `${file}(${count[file]})`
+        newFile.push(nFiles)
+      }
+
+    }
+
+    return newFile; 
+  }
+  
+  const file1 = ['car','stuffed animals','clothes','sweets','sweets','car']
+  console.log(result = FilesFunction(file1))
+
+  files2 = ['photo', 'postcard', 'photo', 'photo', 'video']
+  console.log(result = FilesFunction(files2))
+
+  files3 = ['file', 'file', 'file', 'game', 'game']
+  console.log(result = FilesFunction(files3))
+
+  files4 = ['file', 'file(1)', 'icon', 'icon(1)', 'icon(1)']
+  console.log(result = FilesFunction(files4))
+
